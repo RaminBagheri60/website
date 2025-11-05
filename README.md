@@ -36,9 +36,9 @@ Play Next.js SaaS boilerplate, you can enjoy a professional-looking website that
 
 ### 🚀 Deploy Now
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fa10i-labs%2FSaaS-template-nextjs)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fa10i-labs%2Fa10i-netlify)
 
-[![Deploy with Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/A10i-labs/SaaS-template-nextjs)
+[![Deploy with Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/RaminBagheri60/a10i-netlify)
 
 ### Setup Instructions
 
