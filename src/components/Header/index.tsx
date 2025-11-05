@@ -52,42 +52,27 @@ const Header = () => {
             : "absolute bg-transparent"
         }`}
       >
-        {/* Try Demo Button - Top Right Corner */}
-        <Link
-          href="https://www.demo.com"
-          target="_blank"
-          className={`absolute right-4 top-4 z-[1000] rounded-lg px-6 py-3 text-lg font-semibold text-white duration-300 ease-in-out hover:bg-sky-500 ${
-            sticky
-              ? "bg-sky-400"
-              : "bg-sky-400/90"
-          }`}
-        >
-          Try Demo
-        </Link>
-
         <div className="container">
           <div className="relative -mx-4 flex items-center justify-between">
             <div className="w-60 max-w-full px-4">
-            <Link
+              <Link
                 href="/"
                 className={`navbar-logo flex items-center gap-2 ${
                   sticky ? "py-2" : "py-5"
                 } `}
               >
-                {/* Logo Icon - You can keep this or remove it */}
-                <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary">
-                  <span className="text-lg font-bold text-white">N</span>
-                </div>
                 {/* Your Brand Name Text */}
                 {pathUrl !== "/" ? (
                   <span className="text-5xl font-bold text-dark dark:text-white">
-                    a10i
+                    A10i
                   </span>
                 ) : (
-                  <span className={`text-5xl font-bold ${
-                    sticky ? "text-dark dark:text-white" : "text-white"
-                  }`}>
-                    a10i
+                  <span
+                    className={`text-5xl font-bold ${
+                      sticky ? "text-dark dark:text-white" : "text-white"
+                    }`}
+                  >
+                    A10i
                   </span>
                 )}
               </Link>
@@ -248,12 +233,99 @@ const Header = () => {
                   </ul>
                 </nav>
               </div>
-              <div className="hidden items-center justify-end pr-16 sm:flex lg:pr-0">
+              <div className="hidden items-center justify-end gap-4 pr-4 sm:flex lg:pr-0">
+                {session?.user ? (
+                  <>
+                    <p
+                      className={`loginBtn whitespace-nowrap px-7 py-3 text-base font-medium ${
+                        !sticky && pathUrl === "/" ? "text-white" : "text-dark"
+                      }`}
+                    >
+                      {session?.user?.name}
+                    </p>
+                    {pathUrl !== "/" || sticky ? (
+                      <button
+                        onClick={() => signOut()}
+                        className="signUpBtn whitespace-nowrap rounded-lg bg-primary bg-opacity-100 px-6 py-3 text-base font-medium text-white duration-300 ease-in-out hover:bg-opacity-20 hover:text-dark"
+                      >
+                        Sign Out
+                      </button>
+                    ) : (
+                      <button
+                        onClick={() => signOut()}
+                        className="signUpBtn whitespace-nowrap rounded-lg bg-white bg-opacity-20 px-6 py-3 text-base font-medium text-white duration-300 ease-in-out hover:bg-opacity-100 hover:text-dark"
+                      >
+                        Sign Out
+                      </button>
+                    )}
+                  </>
+                ) : (
+                  <>
+                    {pathUrl !== "/" ? (
+                      <>
+                        {/* Sign In */}
+                        <Link
+                          href="/signin"
+                          className="whitespace-nowrap px-5 py-3 text-base font-medium text-dark hover:opacity-70 dark:text-white"
+                        >
+                          Sign In
+                        </Link>
+                        {/* Sign Up */}
+                        <Link
+                          href="/signup"
+                          className="whitespace-nowrap rounded-lg bg-primary px-5 py-3 text-base font-medium text-white duration-300 ease-in-out hover:bg-primary/90 dark:bg-white/10 dark:hover:bg-white/20"
+                        >
+                          Sign Up
+                        </Link>
+                        {/* Request Demo */}
+                        <Link
+                          href="/contact"
+                          className="whitespace-nowrap px-5 py-3 text-base font-medium text-dark hover:opacity-70 dark:text-white"
+                        >
+                          Request Demo
+                        </Link>
+                      </>
+                    ) : (
+                      <>
+                        {/* Sign In */}
+                        <Link
+                          href="/signin"
+                          className={`whitespace-nowrap px-5 py-3 text-base font-medium hover:opacity-70 ${
+                            sticky ? "text-dark dark:text-white" : "text-white"
+                          }`}
+                        >
+                          Sign In
+                        </Link>
+                        {/* Sign Up */}
+                        <Link
+                          href="/signup"
+                          className={`whitespace-nowrap rounded-lg px-5 py-3 text-base font-medium text-white duration-300 ease-in-out ${
+                            sticky
+                              ? "bg-primary hover:bg-primary/90 dark:bg-white/10 dark:hover:bg-white/20"
+                              : "bg-white/10 hover:bg-white/20"
+                          }`}
+                        >
+                          Sign Up
+                        </Link>
+                        {/* Request Demo */}
+                        <Link
+                          href="/contact"
+                          className={`whitespace-nowrap px-5 py-3 text-base font-medium hover:opacity-70 ${
+                            sticky ? "text-dark dark:text-white" : "text-white"
+                          }`}
+                        >
+                          Request Demo
+                        </Link>
+                      </>
+                    )}
+                  </>
+                )}
+
                 {/* theme toggler */}
                 <button
                   aria-label="theme toggler"
                   onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                  className="flex h-8 w-8 items-center justify-center text-body-color duration-300 dark:text-white"
+                  className="flex h-8 w-8 items-center justify-center text-body-color duration-300 dark:text-white ml-2"
                 >
                   <span>
                     <svg
@@ -276,72 +348,16 @@ const Header = () => {
                   </span>
                 </button>
 
-                {session?.user ? (
-                  <>
-                    <p
-                      className={`loginBtn px-7 py-3 text-base font-medium ${
-                        !sticky && pathUrl === "/" ? "text-white" : "text-dark"
-                      }`}
-                    >
-                      {session?.user?.name}
-                    </p>
-                    {pathUrl !== "/" || sticky ? (
-                      <button
-                        onClick={() => signOut()}
-                        className="signUpBtn rounded-lg bg-primary bg-opacity-100 px-6 py-3 text-base font-medium text-white duration-300 ease-in-out hover:bg-opacity-20 hover:text-dark"
-                      >
-                        Sign Out
-                      </button>
-                    ) : (
-                      <button
-                        onClick={() => signOut()}
-                        className="signUpBtn rounded-lg bg-white bg-opacity-20 px-6 py-3 text-base font-medium text-white duration-300 ease-in-out hover:bg-opacity-100 hover:text-dark"
-                      >
-                        Sign Out
-                      </button>
-                    )}
-                  </>
-                ) : (
-                  <>
-                    {pathUrl !== "/" ? (
-                      <>
-                        <Link
-                          href="/signin"
-                          className="px-7 py-3 text-base font-medium text-dark hover:opacity-70 dark:text-white"
-                        >
-                          Sign In
-                        </Link>
-                        <Link
-                          href="/signup"
-                          className="rounded-lg bg-primary px-6 py-3 text-base font-medium text-white duration-300 ease-in-out hover:bg-primary/90 dark:bg-white/10 dark:hover:bg-white/20"
-                        >
-                          Sign Up
-                        </Link>
-                      </>
-                    ) : (
-                      <>
-                        <Link
-                          href="/signin"
-                          className={`px-7 py-3 text-base font-medium hover:opacity-70 ${
-                            sticky ? "text-dark dark:text-white" : "text-white"
-                          }`}
-                        >
-                          Sign In
-                        </Link>
-                        <Link
-                          href="/signup"
-                          className={`rounded-lg px-6 py-3 text-base font-medium text-white duration-300 ease-in-out ${
-                            sticky
-                              ? "bg-primary hover:bg-primary/90 dark:bg-white/10 dark:hover:bg-white/20"
-                              : "bg-white/10 hover:bg-white/20"
-                          }`}
-                        >
-                          Sign Up
-                        </Link>
-                      </>
-                    )}
-                  </>
-                )}
+                {/* Try Demo Button - Rightmost */}
+                <Link
+                  href="https://www.demo.com"
+                  target="_blank"
+                  className={`whitespace-nowrap rounded-lg px-6 py-3 text-lg font-semibold text-white duration-300 ease-in-out hover:bg-sky-500 ml-2 ${
+                    sticky ? "bg-sky-400" : "bg-sky-400/90"
+                  }`}
+                >
+                  Try Demo
+                </Link>
               </div>
             </div>
           </div>
