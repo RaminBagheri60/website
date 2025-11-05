@@ -55,50 +55,27 @@ const Header = () => {
         <div className="container">
           <div className="relative -mx-4 flex items-center justify-between">
             <div className="w-60 max-w-full px-4">
-              <Link
+            <Link
                 href="/"
-                className={`navbar-logo block w-full ${
+                className={`navbar-logo flex items-center gap-2 ${
                   sticky ? "py-2" : "py-5"
                 } `}
               >
+                {/* Logo Icon - You can keep this or remove it */}
+                <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary">
+                  <span className="text-lg font-bold text-white">N</span>
+                </div>
+                {/* Your Brand Name Text */}
                 {pathUrl !== "/" ? (
-                  <>
-                    <Image
-                      src={`/images/logo/logo.svg`}
-                      alt="logo"
-                      width={240}
-                      height={30}
-                      className="header-logo w-full dark:hidden"
-                    />
-                    <Image
-                      src={`/images/logo/logo-white.svg`}
-                      alt="logo"
-                      width={240}
-                      height={30}
-                      className="header-logo hidden w-full dark:block"
-                    />
-                  </>
+                  <span className="text-5xl font-bold text-dark dark:text-white">
+                    a10i
+                  </span>
                 ) : (
-                  <>
-                    <Image
-                      src={`${
-                        sticky
-                          ? "/images/logo/logo.svg"
-                          : "/images/logo/logo-white.svg"
-                      }`}
-                      alt="logo"
-                      width={140}
-                      height={30}
-                      className="header-logo w-full dark:hidden"
-                    />
-                    <Image
-                      src={"/images/logo/logo-white.svg"}
-                      alt="logo"
-                      width={140}
-                      height={30}
-                      className="header-logo hidden w-full dark:block"
-                    />
-                  </>
+                  <span className={`text-5xl font-bold ${
+                    sticky ? "text-dark dark:text-white" : "text-white"
+                  }`}>
+                    a10i
+                  </span>
                 )}
               </Link>
             </div>
