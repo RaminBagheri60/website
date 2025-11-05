@@ -52,6 +52,19 @@ const Header = () => {
             : "absolute bg-transparent"
         }`}
       >
+        {/* Try Demo Button - Top Right Corner */}
+        <Link
+          href="https://www.demo.com"
+          target="_blank"
+          className={`absolute right-4 top-4 z-[1000] rounded-lg px-6 py-3 text-lg font-semibold text-white duration-300 ease-in-out hover:bg-sky-500 ${
+            sticky
+              ? "bg-sky-400"
+              : "bg-sky-400/90"
+          }`}
+        >
+          Try Demo
+        </Link>
+
         <div className="container">
           <div className="relative -mx-4 flex items-center justify-between">
             <div className="w-60 max-w-full px-4">
