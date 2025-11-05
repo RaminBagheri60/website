@@ -11,10 +11,12 @@ import type { Adapter } from "next-auth/adapters";
 
 export const authOptions: NextAuthOptions = {
   pages: {
-    signIn: "/auth/signin",
+    // Match our actual route at src/app/(site)/(auth)/signin/page.tsx
+    signIn: "/signin",
   },
   adapter: PrismaAdapter(prisma) as Adapter,
-  secret: process.env.SECRET,
+  // Use standard NEXTAUTH_SECRET with a fallback to SECRET for compatibility
+  secret: process.env.NEXTAUTH_SECRET || process.env.SECRET,
   session: {
     strategy: "jwt",
   },
