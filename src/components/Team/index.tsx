@@ -1,5 +1,4 @@
 import { TeamType } from "@/types/team";
-import SectionTitle from "../Common/SectionTitle";
 import SingleTeam from "./SingleTeam";
 
 const teamData: TeamType[] = [
@@ -49,13 +48,9 @@ const Team = () => {
     >
       <div className="container">
         <div className="mb-[60px]">
-          <SectionTitle
-            subtitle="Our Team"
-            title="Meet Our Team"
-            paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
-            width="640px"
-            center
-          />
+          <h2 className="text-center text-3xl font-bold text-dark dark:text-white sm:text-4xl md:text-[42px]">
+            Our Team
+          </h2>
         </div>
 
         <div className="-mx-4 flex flex-wrap justify-center">

@@ -1,9 +1,10 @@
 import About from "@/components/About";
 //import HomeBlogSection from "@/components/Blog/HomeBlogSection";
-import CallToAction from "@/components/CallToAction";
-import Clients from "@/components/Clients";
+//import CallToAction from "@/components/CallToAction";
+//import Clients from "@/components/Clients";
 import ScrollUp from "@/components/Common/ScrollUp";
 //import Contact from "@/components/Contact";
+import DataBottleneck from "@/components/DataBottleneck";
 //import Faq from "@/components/Faq";
 //import Features from "@/components/Features";
 import Hero from "@/components/Hero";
@@ -26,16 +27,17 @@ export default function Home() {
     <main>
       <ScrollUp />
       <Hero />
+      <DataBottleneck />
       {/* <Features /> */}
       {/* <About /> */}
-      <CallToAction />
+      {/* <CallToAction /> */}
       {/* <Pricing /> */}
       {/* <Testimonials /> */}
       {/* <Faq /> */}
       <Team />
       {/* <HomeBlogSection posts={posts} /> */}
       {/* <Contact /> */}
-      <Clients />
+      {/* <Clients /> */}
     </main>
   );
 }
