@@ -1,15 +1,15 @@
 const DataBottleneck = () => {
   return (
-    <section className="bg-white py-16 dark:bg-dark md:py-20 lg:py-28">
+    <section className="bg-[#090E34] py-16 md:py-20 lg:py-28">
       <div className="container">
         <div className="mx-auto max-w-[1200px] text-center">
           {/* Title */}
-          <h2 className="mb-4 text-3xl font-bold text-dark dark:text-white sm:text-4xl md:text-[42px] md:leading-[1.2]">
+          <h2 className="mb-4 text-3xl font-bold text-white sm:text-4xl md:text-[42px] md:leading-[1.2]">
             The Life Sciences Data Bottleneck
           </h2>
           
           {/* Subtitle with highlighted text */}
-          <p className="mx-auto mb-12 max-w-[900px] text-base text-body-color dark:text-dark-6 sm:text-lg md:text-xl">
+          <p className="mx-auto mb-12 max-w-[900px] text-base text-gray-300 sm:text-lg md:text-xl">
             Genome annotation pipelines take{" "}
             <span className="font-semibold text-[#3B82F6]">2-6 weeks</span>{" "}
             per study; 80% is spent on scripting and cluster wrangling instead of discovery.

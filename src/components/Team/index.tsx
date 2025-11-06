@@ -51,13 +51,18 @@ const Team = () => {
           <h2 className="text-center text-3xl font-bold text-dark dark:text-white sm:text-4xl md:text-[42px]">
             Our Team
           </h2>
+          <p className="mx-auto mt-6 max-w-[800px] text-center text-lg text-body-color dark:text-dark-6 sm:text-xl md:text-2xl">
+            Our team brings over 20 years of combined expertise in software
+            engineering, AI/ML, and data science, with a deep specialization in
+            computational biology and bioinformatics.
+          </p>
         </div>
 
-        <div className="-mx-4 flex flex-wrap justify-center">
+        {/* <div className="-mx-4 flex flex-wrap justify-center">
           {teamData.map((team, i) => (
             <SingleTeam key={i} team={team} />
           ))}
-        </div>
+        </div> */}
       </div>
     </section>
   );
