@@ -1,5 +1,5 @@
 "use client";
-import { signOut, useSession } from "next-auth/react";
+import { /* signOut, */ useSession } from "next-auth/react";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import Link from "next/link";
@@ -243,7 +243,7 @@ const Header = () => {
                     >
                       {session?.user?.name}
                     </p>
-                    {pathUrl !== "/" || sticky ? (
+                    {/* {pathUrl !== "/" || sticky ? (
                       <button
                         onClick={() => signOut()}
                         className="signUpBtn whitespace-nowrap rounded-lg bg-primary bg-opacity-100 px-6 py-3 text-base font-medium text-white duration-300 ease-in-out hover:bg-opacity-20 hover:text-dark"
@@ -257,47 +257,40 @@ const Header = () => {
                       >
                         Sign Out
                       </button>
-                    )}
+                    )} */}
                   </>
                 ) : (
                   <>
                     {pathUrl !== "/" ? (
                       <>
                         {/* Sign In */}
-                        <Link
+                        {/* <Link
                           href="/signin"
                           className="whitespace-nowrap px-5 py-3 text-base font-medium text-dark hover:opacity-70 dark:text-white"
                         >
                           Sign In
-                        </Link>
+                        </Link> */}
                         {/* Sign Up */}
-                        <Link
+                        {/* <Link
                           href="/signup"
                           className="whitespace-nowrap rounded-lg bg-primary px-5 py-3 text-base font-medium text-white duration-300 ease-in-out hover:bg-primary/90 dark:bg-white/10 dark:hover:bg-white/20"
                         >
                           Sign Up
-                        </Link>
-                        {/* Request Demo */}
-                        <Link
-                          href="/contact"
-                          className="whitespace-nowrap px-5 py-3 text-base font-medium text-dark hover:opacity-70 dark:text-white"
-                        >
-                          Request Demo
-                        </Link>
+                        </Link> */}
                       </>
                     ) : (
                       <>
                         {/* Sign In */}
-                        <Link
+                        {/* <Link
                           href="/signin"
                           className={`whitespace-nowrap px-5 py-3 text-base font-medium hover:opacity-70 ${
                             sticky ? "text-dark dark:text-white" : "text-white"
                           }`}
                         >
                           Sign In
-                        </Link>
+                        </Link> */}
                         {/* Sign Up */}
-                        <Link
+                        {/* <Link
                           href="/signup"
                           className={`whitespace-nowrap rounded-lg px-5 py-3 text-base font-medium text-white duration-300 ease-in-out ${
                             sticky
@@ -306,16 +299,7 @@ const Header = () => {
                           }`}
                         >
                           Sign Up
-                        </Link>
-                        {/* Request Demo */}
-                        <Link
-                          href="/contact"
-                          className={`whitespace-nowrap px-5 py-3 text-base font-medium hover:opacity-70 ${
-                            sticky ? "text-dark dark:text-white" : "text-white"
-                          }`}
-                        >
-                          Request Demo
-                        </Link>
+                        </Link> */}
                       </>
                     )}
                   </>
@@ -325,7 +309,7 @@ const Header = () => {
                 <button
                   aria-label="theme toggler"
                   onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                  className="flex h-8 w-8 items-center justify-center text-body-color duration-300 dark:text-white ml-2"
+                  className="ml-2 flex h-8 w-8 items-center justify-center text-body-color duration-300 dark:text-white"
                 >
                   <span>
                     <svg
@@ -348,11 +332,25 @@ const Header = () => {
                   </span>
                 </button>
 
+                {/* Request Demo Button */}
+                <Link
+                  href="/contact"
+                  className={`ml-2 whitespace-nowrap rounded-lg px-6 py-3 text-lg font-semibold duration-300 ease-in-out ${
+                    sticky
+                      ? "bg-gray-200 text-dark hover:bg-gray-300 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600"
+                      : pathUrl === "/"
+                        ? "bg-white/20 text-white hover:bg-white/30"
+                        : "bg-gray-200 text-dark hover:bg-gray-300 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600"
+                  }`}
+                >
+                  Request Demo
+                </Link>
+
                 {/* Try Demo Button - Rightmost */}
                 <Link
                   href="https://www.demo.com"
                   target="_blank"
-                  className={`whitespace-nowrap rounded-lg px-6 py-3 text-lg font-semibold text-white duration-300 ease-in-out hover:bg-sky-500 ml-2 ${
+                  className={`ml-2 whitespace-nowrap rounded-lg px-6 py-3 text-lg font-semibold text-white duration-300 ease-in-out hover:bg-sky-500 ${
                     sticky ? "bg-sky-400" : "bg-sky-400/90"
                   }`}
                 >

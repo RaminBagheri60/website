@@ -21,7 +21,7 @@ const menuData: Menu[] = [
   {
     id: 6,
     title: "GitHub",
-    path: "https://github.com/A10i-labs/a10i-netlify",
+    path: "https://github.com/RaminBagheri60/website",
     newTab: true,
   },
 
