@@ -36,9 +36,9 @@ Play Next.js SaaS boilerplate, you can enjoy a professional-looking website that
 
 ### 🚀 Deploy Now
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fa10i-labs%2Fa10i-netlify)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FRaminBagheri60%2Fwebsite)
 
-[![Deploy with Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/RaminBagheri60/a10i-netlify)
+[![Deploy with Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/RaminBagheri60/website)
 
 ### Setup Instructions
 
@@ -66,29 +66,38 @@ This will launch the template on [localhost:3000](http://localhost:3000).
 
 ### Environment Variables Setup
 
-Create a `.env.local` file in the root directory to configure your application. Here are the required environment variables:
+A `.env.local` file has been created in the root directory with all required environment variables. This file contains sensitive configuration needed for the application to run properly.
 
-#### Required Variables
+#### What's in the .env.local file?
 
+The `.env.local` file includes the following configuration sections:
+
+**1. Authentication (NextAuth)**
+- `NEXTAUTH_SECRET`: Secure key for encrypting JWT tokens and session data
+- `NEXTAUTH_URL`: Your application URL (localhost during development)
+
+**2. Database Connection**
+- `DATABASE_URL`: PostgreSQL connection string for storing user data and application state
+
+**3. OAuth Providers (Optional)**
+- Google and GitHub login credentials for social authentication
+- Leave empty if you don't need social login features
+
+**4. Email Configuration**
+- SMTP settings for sending emails (contact forms, password resets, magic links)
+- Uses Gmail's SMTP server by default, but can be configured for any email provider
+
+**Example structure:**
 ```env
-# NextAuth Secret (Required for JWT encryption/decryption)
-NEXTAUTH_SECRET=your-random-secret-key-here
+NEXTAUTH_SECRET=your-secret-key
 NEXTAUTH_URL=http://localhost:3000
-
-# Database Connection (PostgreSQL)
-DATABASE_URL=your-postgresql-connection-string
-
-# OAuth Providers (Optional - for social login)
-GOOGLE_CLIENT_ID=your-google-client-id
-GOOGLE_CLIENT_SECRET=your-google-client-secret
-GITHUB_CLIENT_ID=your-github-client-id
-GITHUB_CLIENT_SECRET=your-github-client-secret
-
-# Email Configuration (Required for contact form and magic link)
+DATABASE_URL=postgresql://username:password@host:port/database
+GOOGLE_CLIENT_ID=your-google-id
+GOOGLE_CLIENT_SECRET=your-google-secret
 EMAIL_SERVER_HOST=smtp.gmail.com
 EMAIL_SERVER_PORT=587
 EMAIL_SERVER_USER=your-email@gmail.com
-EMAIL_SERVER_PASSWORD=your-app-specific-password
+EMAIL_SERVER_PASSWORD=your-app-password
 EMAIL_FROM=your-email@gmail.com
 ```
 
