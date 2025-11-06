@@ -19,6 +19,12 @@ const menuData: Menu[] = [
     newTab: false,
   },
   {
+    id: 5,
+    title: "Contact Us",
+    path: "/contact",
+    newTab: false,
+  },
+  {
     id: 6,
     title: "GitHub",
     path: "https://github.com/RaminBagheri60/website",
@@ -29,12 +35,6 @@ const menuData: Menu[] = [
   //   id: 7,
   //   title: "Pricing",
   //   path: "/pricing",
-  //   newTab: false,
-  // },
-  // {
-  //   id: 8,
-  //   title: "Contact",
-  //   path: "/contact",
   //   newTab: false,
   // },
   // {

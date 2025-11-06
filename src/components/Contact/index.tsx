@@ -79,7 +79,7 @@ const Contact = () => {
                 </h2>
               </div>
               <div className="mb-12 flex flex-wrap justify-between lg:mb-0">
-                <div className="mb-8 flex w-[330px] max-w-full">
+                {/* <div className="mb-8 flex w-[330px] max-w-full">
                   <div className="mr-6 text-[32px] text-primary">
                     <svg
                       width="29"
@@ -99,7 +99,7 @@ const Contact = () => {
                       401 Broadway, 24th Floor, Orchard Cloud View, London
                     </p>
                   </div>
-                </div>
+                </div> */}
                 <div className="mb-8 flex w-[330px] max-w-full">
                   <div className="mr-6 text-[32px] text-primary">
                     <svg
@@ -116,10 +116,10 @@ const Contact = () => {
                       How Can We Help?
                     </h3>
                     <p className="text-base text-body-color dark:text-dark-6">
-                      info@yourdomain.com
+                      info@a10i.io
                     </p>
                     <p className="mt-1 text-base text-body-color dark:text-dark-6">
-                      contact@yourdomain.com
+                      contact@a10i.io
                     </p>
                   </div>
                 </div>
@@ -170,7 +170,7 @@ const Contact = () => {
                     className="w-full border-0 border-b border-[#f1f1f1] bg-transparent pb-3 text-dark placeholder:text-body-color/60 focus:border-primary focus:outline-none dark:border-dark-3 dark:text-white"
                   />
                 </div>
-                <div className="mb-[22px]">
+                {/* <div className="mb-[22px]">
                   <label
                     htmlFor="phone"
                     className="mb-4 block text-sm text-body-color dark:text-dark-6"
@@ -186,7 +186,7 @@ const Contact = () => {
                     required
                     className="w-full border-0 border-b border-[#f1f1f1] bg-transparent pb-3 text-dark placeholder:text-body-color/60 focus:border-primary focus:outline-none dark:border-dark-3 dark:text-white"
                   />
-                </div>
+                </div> */}
                 <div className="mb-[30px]">
                   <label
                     htmlFor="message"
