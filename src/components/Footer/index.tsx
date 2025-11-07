@@ -251,7 +251,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="mt-12 border-t border-[#8890A4] border-opacity-40 py-8 lg:mt-[60px]">
+      {/* <div className="mt-12 border-t border-[#8890A4] border-opacity-40 py-8 lg:mt-[60px]">
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4 md:w-2/3 lg:w-1/2">
@@ -269,33 +269,12 @@ const Footer = () => {
                   >
                     Legal notice
                   </Link>
-                  {/* <Link
-                    href="#"
-                    className="px-3 text-base text-gray-7 hover:text-white hover:underline"
-                  >
-                    Terms of service
-                  </Link> */}
                 </div>
               </div>
             </div>
-            {/* <div className="w-full px-4 md:w-1/3 lg:w-1/2">
-              <div className="my-1 flex justify-center md:justify-end">
-                <p className="text-base text-gray-7">
-                  Designed and Developed by{" "}
-                  <Link
-                    href="https://tailgrids.com"
-                    rel="nofollow noopner noreferrer"
-                    target="_blank"
-                    className="text-gray-1 hover:underline"
-                  >
-                    TailGrids and Next.js Templates
-                  </Link>
-                </p>
-              </div>
-            </div> */}
           </div>
         </div>
-      </div>
+      </div> */}
 
       <div>
         <span className="absolute left-0 top-0 z-[-1] aspect-[95/82] w-full max-w-[570px]">
