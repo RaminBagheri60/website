@@ -114,14 +114,14 @@ const Footer = () => {
                     About
                   </Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link
                     href="#"
                     className="mb-3 inline-block text-base text-gray-7 hover:text-primary"
                   >
                     Testimonial
                   </Link>
-                </li>
+                </li> */}
               </ul>
             </div>
           </div>
@@ -147,14 +147,14 @@ const Footer = () => {
                     Privacy policy
                   </Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link
                     href="#"
                     className="mb-3 inline-block text-base text-gray-7 hover:text-primary"
                   >
                     Terms of Service
                   </Link>
-                </li>
+                </li> */}
                 <li>
                   <Link
                     href="#"
@@ -221,14 +221,14 @@ const Footer = () => {
                     FAQ
                   </Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link
                     href="#"
                     className="mb-3 inline-block text-base text-gray-7 hover:text-primary"
                   >
                     Blogs
                   </Link>
-                </li>
+                </li> */}
                 <li>
                   <Link
                     href="#"
@@ -269,12 +269,12 @@ const Footer = () => {
                   >
                     Legal notice
                   </Link>
-                  <Link
+                  {/* <Link
                     href="#"
                     className="px-3 text-base text-gray-7 hover:text-white hover:underline"
                   >
                     Terms of service
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
             </div>
