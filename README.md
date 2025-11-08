@@ -73,21 +73,26 @@ A `.env.local` file has been created in the root directory with all required env
 The `.env.local` file includes the following configuration sections:
 
 **1. Authentication (NextAuth)**
+
 - `NEXTAUTH_SECRET`: Secure key for encrypting JWT tokens and session data
 - `NEXTAUTH_URL`: Your application URL (localhost during development)
 
 **2. Database Connection**
+
 - `DATABASE_URL`: PostgreSQL connection string for storing user data and application state
 
 **3. OAuth Providers (Optional)**
+
 - Google and GitHub login credentials for social authentication
 - Leave empty if you don't need social login features
 
 **4. Email Configuration**
+
 - SMTP settings for sending emails (contact forms, password resets, magic links)
 - Uses Gmail's SMTP server by default, but can be configured for any email provider
 
 **Example structure:**
+
 ```env
 NEXTAUTH_SECRET=your-secret-key
 NEXTAUTH_URL=http://localhost:3000
@@ -142,6 +147,24 @@ EMAIL_FROM=your-email@gmail.com
 **Note:** Never commit `.env.local` to version control. It's already included in `.gitignore`.
 
 For detailed email setup instructions, see [CONTACT_FORM_FIX_GUIDE.md](./CONTACT_FORM_FIX_GUIDE.md)
+
+### Managing Custom Icons from `src/icons`
+
+Follow these steps whenever you want to drop new PNG/SVG assets into the design (for example in `DataBottleneck` cards):
+
+1. **Copy assets into `public`**  
+   Next.js only serves files from `public`, so after creating or updating an icon in `src/icons`, copy it to the matching path under `public/icons` (e.g. `Copy-Item src\icons\my-icon.png public\icons\my-icon.png -Force` on PowerShell). Overwrite the existing file so the browser sees the latest version.
+
+2. **Reference with `/icons/...`**  
+   Inside your components, import `Image` from `next/image` and point the `src` prop at the public URL, such as `<Image src="/icons/my-icon.png" ... />`. The leading slash automatically maps to the `public` directory.
+
+3. **Size the icon intentionally**  
+   To render the asset at its real size, pass its native width/height (you can inspect them with `npx image-size src\icons\my-icon.png`). For circular crops or responsive sizing, wrap the image in a container (e.g. `div` with `h-56 w-56 rounded-full`) and use `fill` plus `object-cover`.
+
+4. **Keep assets in sync**  
+   Any time you edit an icon in `src/icons`, repeat step 1 so the version in `public/icons` stays updated. For repeated workflows, consider scripting this copy step.
+
+With these steps you can manually update or replace icons while keeping the app in sync with Next.js’ static asset pipeline.
 
 ### Deployment on PaaS
 
