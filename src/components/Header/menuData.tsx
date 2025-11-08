@@ -25,6 +25,31 @@ const menuData: Menu[] = [
     newTab: false,
   },
   {
+    id: 7,
+    title: "Pages",
+    newTab: false,
+    submenu: [
+      {
+        id: 71,
+        title: "Blog",
+        path: "/blog",
+        newTab: false,
+      },
+      {
+        id: 72,
+        title: "Forum",
+        path: "/forum",
+        newTab: false,
+      },
+      {
+        id: 73,
+        title: "Contact Us",
+        path: "/contact",
+        newTab: false,
+      },
+    ],
+  },
+  {
     id: 6,
     title: "GitHub",
     path: "https://github.com/RaminBagheri60/website",
