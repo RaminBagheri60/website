@@ -23,9 +23,9 @@ const DataBottleneck = () => {
             {/* Card 1 - Complex Processing */}
             <div className="flex h-full flex-col items-center gap-4 p-6 text-center">
               <div className="flex justify-center">
-                <div className="relative h-56 w-56 overflow-hidden rounded-full">
+                <div className="relative h-56 w-56 overflow-hidden rounded-full bg-gradient-to-br from-[#1F1A3F] via-[#241F4F] to-[#0A0E34]">
                   <Image
-                    src="/icons/icon-33r.png"
+                    src="/icons/image-1.png"
                     alt="Complex Processing"
                     fill
                     className="object-cover"
@@ -46,9 +46,9 @@ const DataBottleneck = () => {
             {/* Card 2 - Infrastructure Burden */}
             <div className="flex h-full flex-col items-center gap-4 p-6 text-center">
               <div className="flex justify-center">
-                <div className="relative h-56 w-56 overflow-hidden rounded-full">
+                <div className="relative h-56 w-56 overflow-hidden rounded-full bg-gradient-to-br from-[#14233F] via-[#1C2E55] to-[#0A0E34]">
                   <Image
-                    src="/icons/icon-22RR.png"
+                    src="/icons/image-4.png"
                     alt="Infrastructure Burden"
                     fill
                     className="object-cover"
@@ -69,9 +69,9 @@ const DataBottleneck = () => {
             {/* Card 3 - Slower Discovery */}
             <div className="flex h-full flex-col items-center gap-4 p-6 text-center">
               <div className="flex justify-center">
-                <div className="relative h-56 w-56 overflow-hidden rounded-full">
+                <div className="relative h-56 w-56 overflow-hidden rounded-full bg-gradient-to-br from-[#2A1B4D] via-[#3A2366] to-[#0A0E34]">
                   <Image
-                    src="/icons/icon-5Rnew3.png"
+                    src="/icons/image-3.png"
                     alt="Slower Discovery"
                     fill
                     className="object-cover"
@@ -92,9 +92,9 @@ const DataBottleneck = () => {
             {/* Card 4 - Data Quality Drag */}
             <div className="flex h-full flex-col items-center gap-4 p-6 text-center">
               <div className="flex justify-center">
-                <div className="relative h-56 w-56 overflow-hidden rounded-full">
+                <div className="relative h-56 w-56 overflow-hidden rounded-full bg-gradient-to-br from-[#132C4D] via-[#1F3C61] to-[#0A0E34]">
                   <Image
-                    src="/icons/icon-1rr.png"
+                    src="/icons/image-2.png"
                     alt="Data Quality Drag"
                     fill
                     className="object-cover"
